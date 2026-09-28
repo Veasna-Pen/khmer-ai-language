@@ -7,6 +7,7 @@
 - [ ] Disambiguation rules (`data/disambiguation/...`)
 - [ ] Reviewed translation examples (`data/examples/...`)
 - [ ] Benchmark cases (`evaluation/...`)
+- [ ] Reviews and status promotions, or reviewer roster changes (`data/reviewers.json`)
 - [ ] Documentation (`*.md`)
 - [ ] Tooling, schemas, or CI (`tools/`, `schemas/`, `examples/`, `.github/`)
 
@@ -18,4 +19,5 @@
 - [ ] `npm test` passes locally.
 - [ ] New terminology entries have `status: "draft"` and a filled-in `provenance`.
 - [ ] Khmer translations were reviewed by a proficient Khmer speaker (not unvetted machine translation).
+- [ ] For status promotions: every handle in `reviewedBy` is in `data/reviewers.json` and belongs to someone who approved this PR.
 - [ ] For schema changes: README and CONTRIBUTING are updated if affected (the validator reads the schemas automatically).

@@ -18,8 +18,8 @@
     "usageNotes": "Universal standard term nationwide in education and industry.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL Computer Science Lexicon",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -43,8 +43,8 @@
     "usageNotes": "'ការដាក់ឱ្យដំណើរការ' is natural for software services. 'ការដាក់ពង្រាយ' is historically military (troop deployment) and can sound awkward in IT context.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "Tech Industry Conventions & NCKL",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -68,8 +68,8 @@
     "usageNotes": "Standard term taught across all Cambodian universities and technical standards.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -93,8 +93,8 @@
     "usageNotes": "In computing architecture (client-server), use 'ម៉ាស៊ីនកូន' or 'កម្មវិធីកូន'. In business/consulting (paying client), use 'អតិថិជន' (see business domain).",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL Computer Science Lexicon",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -118,8 +118,8 @@
     "usageNotes": "Use 'ឃ្លាំងផ្ទុកកូដ' for software code repositories to provide immediate clarity.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "Tech Glossary & Open Source Community",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -143,8 +143,8 @@
     "usageNotes": "Universal standard term for backups.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -168,8 +168,8 @@
     "usageNotes": "Standard term for restoring data.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -193,8 +193,8 @@
     "usageNotes": "'ការបំប្លែងកូដសម្ងាត់' is the formal NCKL term. In developer documentation, 'ការអ៊ិនគ្រីប' is also widely understood as an alternative.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }

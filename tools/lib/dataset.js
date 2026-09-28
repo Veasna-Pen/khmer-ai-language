@@ -47,5 +47,6 @@ module.exports = {
   loadBundle,
   loadContexts: () => readJsonIfExists(paths.CONTEXTS_FILE, []),
   loadExamples: () => readJsonIfExists(paths.EXAMPLES_FILE, []),
+  loadReviewers: () => readJsonIfExists(paths.REVIEWERS_FILE, []),
   loadBenchmark: () => readJson(paths.BENCHMARK_FILE),
 };

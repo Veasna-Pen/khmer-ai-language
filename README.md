@@ -45,9 +45,9 @@ Natural, consistent Khmer output
 | **Reviewed examples** | [`data/examples/reviewed.json`](data/examples/reviewed.json) | Full English ↔ Khmer sentence pairs for few-shot prompting |
 | **Benchmark** | [`evaluation/benchmark.json`](evaluation/benchmark.json) | Test sentences with required terms and known AI mistakes |
 
-Current domains: `software`, `finance`, `ecommerce`, `business`. The schema also reserves `technology`, `general`, `legal`, `healthcare` and `education` for future contributions.
+Current domains: `software`, `finance`, `ecommerce`, `business`. `general`, `technology` and `education` have empty topic files ready for their first entries, and the schema also reserves `legal` and `healthcare`.
 
-> **Review status:** every entry is currently `draft`. The seed data has not yet been reviewed by named Khmer speakers, so treat it as suggestions until entries move to `community-reviewed` or higher. Reviewers are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md#8-review-statuses).
+> **Review status:** every entry is currently `draft`. The seed data has not yet been reviewed by named Khmer speakers, so treat it as suggestions until entries move to `community-reviewed` or higher. Native speakers, translators and linguists can [become a reviewer](CONTRIBUTING.md#9-becoming-a-reviewer).
 
 ### Example term entry
 
@@ -71,8 +71,8 @@ Current domains: `software`, `finance`, `ecommerce`, `business`. The schema also
   "usageNotes": "Always prefer 'ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ' over literal or phonetic transliteration.",
   "status": "draft",
   "provenance": {
-    "sourceType": "official-glossary",
-    "reference": "National Council of Khmer Language (NCKL) & Tech Lexicons",
+    "sourceType": "community",
+    "reference": "Seed data; source not yet documented",
     "reviewedBy": [],
     "lastUpdated": "2026-09-28"
   }

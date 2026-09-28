@@ -18,8 +18,8 @@
     "usageNotes": "For UI buttons, keep it short as 'ចូល'. For page titles, 'ចូលគណនី' or 'ចូលប្រើប្រាស់' is also natural. Avoid phonetic transliteration 'ឡកអ៊ីន'.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "Common software UI standards & NCKL lexicon",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -43,8 +43,8 @@
     "usageNotes": "Standard software UI term across mobile and web applications.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "Common software UI standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -68,8 +68,8 @@
     "usageNotes": "'ចុះឈ្មោះ' is universal. When referring to account creation explicitly, 'បង្កើតគណនី' is also widely used.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL & Cambodian Localization Standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -93,8 +93,8 @@
     "usageNotes": "Use 'ដាក់ស្នើ' for applications, proposals, or forms. For messaging/chat, use 'ផ្ញើ' (send).",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -118,8 +118,8 @@
     "usageNotes": "Standard term for aborting or cancelling actions across software interfaces.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "Khmer OS & Localization Lexicon",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -143,8 +143,8 @@
     "usageNotes": "Use 'បញ្ជាក់' for verifying information. Do not transliterate phonetically.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -168,8 +168,8 @@
     "usageNotes": "'លុប' is the standard concise verb for delete across all Cambodian software.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "Khmer OS",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -193,8 +193,8 @@
     "usageNotes": "'កែសម្រួល' is preferred for editing text, profile, or items.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "Khmer OS & NCKL",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -218,8 +218,8 @@
     "usageNotes": "'រក្សាទុក' is universal for digital saving. In banking/financial contexts, saving money is 'សន្សំ' (see finance domain).",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL & Khmer OS",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -243,8 +243,8 @@
     "usageNotes": "Use 'ផ្ទុកឡើង' for file uploads. For posting content on social media, 'បង្ហោះ' is also common.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -268,8 +268,8 @@
     "usageNotes": "'ទាញយក' is the accepted standard nationwide.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -293,8 +293,8 @@
     "usageNotes": "Standard term for search across all software.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -318,8 +318,8 @@
     "usageNotes": "As a verb use 'ត្រង'. As a noun (the filter itself) use 'តម្រង'.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL Lexicon",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -343,8 +343,8 @@
     "usageNotes": "Standard term for ordering items.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -368,8 +368,8 @@
     "usageNotes": "'ផ្ទុកឡើងវិញ' is technically precise and preferred for reloading data. 'ធ្វើឱ្យស្រស់' is an awkward literal translation that should be avoided in modern UI.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "Mozilla Khmer & NCKL",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -393,8 +393,8 @@
     "usageNotes": "Standard software terminology nationwide.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -418,8 +418,8 @@
     "usageNotes": "'ការជូនដំណឹង' is universally understood in digital applications.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -443,8 +443,8 @@
     "usageNotes": "Standard term for dashboard in administration software.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL & Tech Glossaries",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -468,8 +468,8 @@
     "usageNotes": "'កម្រងព័ត៌មាន' is the standard term established by NCKL and used across mainstream apps.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -493,8 +493,8 @@
     "usageNotes": "Use 'បើកដំណើរការ' for features and services. For simple buttons or physical switches, 'បើក' is acceptable.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
@@ -518,8 +518,8 @@
     "usageNotes": "Use 'បិទដំណើរការ' for turning off software capabilities.",
     "status": "draft",
     "provenance": {
-      "sourceType": "official-glossary",
-      "reference": "NCKL standards",
+      "sourceType": "community",
+      "reference": "Seed data; source not yet documented",
       "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }

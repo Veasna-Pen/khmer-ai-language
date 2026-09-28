@@ -138,7 +138,7 @@
           "items": {
             "type": "string"
           },
-          "description": "List of contributors or experts who reviewed this entry."
+          "description": "GitHub handles of the reviewers of this entry. Every handle must be listed in data/reviewers.json."
         },
         "lastUpdated": {
           "type": "string",
@@ -147,5 +147,38 @@
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "description": "Community review needs at least 2 named reviewers.",
+      "if": {
+        "required": ["status"],
+        "properties": { "status": { "enum": ["community-reviewed"] } }
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "required": ["reviewedBy"],
+            "properties": { "reviewedBy": { "minItems": 2 } }
+          }
+        }
+      }
+    },
+    {
+      "description": "Expert-reviewed and verified entries need a cited source and at least one reviewer who is an expert for the entry's domain in data/reviewers.json.",
+      "if": {
+        "required": ["status"],
+        "properties": { "status": { "enum": ["expert-reviewed", "verified"] } }
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "x-requiresReviewerLevel": "expert",
+            "required": ["reviewedBy", "reference"],
+            "properties": { "reviewedBy": { "minItems": 1 } }
+          }
+        }
+      }
+    }
+  ]
 }

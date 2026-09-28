@@ -4,6 +4,7 @@ const ROOT = path.resolve(__dirname, '../..');
 const DATA_DIR = path.join(ROOT, 'data');
 const DIST_DIR = path.join(ROOT, 'dist');
 const EVALUATION_DIR = path.join(ROOT, 'evaluation');
+const DISAMBIGUATION_DIR = path.join(DATA_DIR, 'disambiguation');
 
 module.exports = {
   ROOT,
@@ -11,7 +12,9 @@ module.exports = {
   TERMINOLOGY_DIR: path.join(DATA_DIR, 'terminology'),
   EXAMPLES_DIR: path.join(DATA_DIR, 'examples'),
   EXAMPLES_FILE: path.join(DATA_DIR, 'examples', 'reviewed.json'),
-  CONTEXTS_FILE: path.join(DATA_DIR, 'disambiguation', 'contexts.json'),
+  DISAMBIGUATION_DIR,
+  CONTEXTS_FILE: path.join(DISAMBIGUATION_DIR, 'contexts.json'),
+  REVIEWERS_FILE: path.join(DATA_DIR, 'reviewers.json'),
   SCHEMAS_DIR: path.join(ROOT, 'schemas'),
   EVALUATION_DIR,
   BENCHMARK_FILE: path.join(EVALUATION_DIR, 'benchmark.json'),
