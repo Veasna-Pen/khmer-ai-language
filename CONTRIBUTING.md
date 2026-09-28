@@ -1,6 +1,6 @@
 # Contributing to Khmer AI Language Reference
 
-Thank you for helping AI systems write better Khmer! 🇰🇭 This guide covers everything you need to open a good pull request.
+Thank you for helping AI systems write better Khmer! This guide covers everything you need to open a good pull request.
 
 ## Contents
 

@@ -1,8 +1,8 @@
-# Khmer AI Language Reference 🇰🇭
+# Khmer AI Language Reference
 
 [![License: CC BY 4.0](https://img.shields.io/badge/Data_License-CC_BY_4.0-lightgrey.svg)](LICENSE-DATA)
 [![License: MIT](https://img.shields.io/badge/Code_License-MIT-blue.svg)](LICENSE-CODE)
-[![CI Validation](https://github.com/khmer-ai/khmer-ai-language/actions/workflows/validate-data.yml/badge.svg)](https://github.com/khmer-ai/khmer-ai-language/actions)
+[![CI Validation](https://github.com/Veasna-Pen/khmer-ai-language/actions/workflows/validate-data.yml/badge.svg)](https://github.com/Veasna-Pen/khmer-ai-language/actions)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 > **An open-source, community-maintained Khmer terminology reference that helps AI and Large Language Models (LLMs) produce accurate, natural, context-aware Khmer translations.**
@@ -108,7 +108,7 @@ A complete prompt template is in [`examples/prompts/`](examples/prompts/terminol
 Requires [Node.js](https://nodejs.org/) 18 or newer. There are no dependencies to install.
 
 ```bash
-git clone https://github.com/khmer-ai/khmer-ai-language.git
+git clone https://github.com/Veasna-Pen/khmer-ai-language.git
 cd khmer-ai-language
 npm test          # validate the dataset
 npm run build     # produce dist/khmer-ai-reference.json

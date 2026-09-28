@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/khmer-ai/khmer-ai-language/main/schemas/term.schema.json",
+  "$id": "https://raw.githubusercontent.com/Veasna-Pen/khmer-ai-language/main/schemas/term.schema.json",
   "title": "KhmerTerminologyEntry",
   "description": "Schema for a single terminology reference entry in the Khmer AI Language Reference.",
   "type": "object",

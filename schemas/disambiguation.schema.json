@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/khmer-ai/khmer-ai-language/main/schemas/disambiguation.schema.json",
+  "$id": "https://raw.githubusercontent.com/Veasna-Pen/khmer-ai-language/main/schemas/disambiguation.schema.json",
   "title": "KhmerDisambiguationEntry",
   "description": "Schema for a polysemous source word whose Khmer translation depends on context.",
   "type": "object",

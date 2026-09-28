@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/khmer-ai/khmer-ai-language/main/schemas/translation.schema.json",
+  "$id": "https://raw.githubusercontent.com/Veasna-Pen/khmer-ai-language/main/schemas/translation.schema.json",
   "title": "KhmerTranslationExample",
   "description": "Schema for reviewed parallel translation examples.",
   "type": "object",

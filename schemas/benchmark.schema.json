@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/khmer-ai/khmer-ai-language/main/schemas/benchmark.schema.json",
+  "$id": "https://raw.githubusercontent.com/Veasna-Pen/khmer-ai-language/main/schemas/benchmark.schema.json",
   "title": "KhmerEvaluationBenchmarkEntry",
   "description": "Schema for benchmark test items evaluating AI Khmer translation quality.",
   "type": "object",
