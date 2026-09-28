@@ -1,134 +1,172 @@
 # Contributing to Khmer AI Language Reference
 
-Thank you for your interest in contributing to the **Khmer AI Language Reference**! 🇰🇭
+Thank you for helping AI systems write better Khmer! 🇰🇭 This guide covers everything you need to open a good pull request.
 
-This project is an open-source, community-maintained knowledge base designed to empower AI models and LLMs to produce accurate, natural, and context-aware Khmer translations.
+## Contents
 
----
-
-## Table of Contents
-1. [Core Principles](#core-principles)
-2. [Ways to Contribute](#ways-to-contribute)
-3. [Terminology Guidelines](#terminology-guidelines)
-4. [Khmer Orthography & Unicode Requirements](#khmer-orthography--unicode-requirements)
-5. [Contribution Workflow (PRs)](#contribution-workflow-prs)
-6. [Review Process & Statuses](#review-process--statuses)
-7. [Running Local Validation](#running-local-validation)
+1. [Core principles](#1-core-principles)
+2. [Ways to contribute](#2-ways-to-contribute)
+3. [Where does my change go?](#3-where-does-my-change-go)
+4. [Adding a terminology entry](#4-adding-a-terminology-entry)
+5. [Khmer text requirements](#5-khmer-text-requirements)
+6. [Pull request workflow](#6-pull-request-workflow)
+7. [Changing the tooling or schemas](#7-changing-the-tooling-or-schemas)
+8. [Review statuses](#8-review-statuses)
 
 ---
 
-## 1. Core Principles
+## 1. Core principles
 
-- **Human Reviewed**: We do **not** accept unverified machine translations into the reference dataset. AI may assist in brainstorming, but entries must be validated by proficient Khmer speakers.
-- **Context-Aware**: Translations should specify domain (`software`, `technology`, `business`, etc.) and real-world usage context.
-- **Natural Khmer**: Prioritize natural phrasing over awkward literal transliteration or rigid English grammatical patterns.
-- **Clean Unicode**: All Khmer text must strictly adhere to Unicode NFC normalization and standard Khmer consonant-vowel sequencing.
-
----
-
-## 2. Ways to Contribute
-
-- **Propose New Terms**: Add missing terms in Software, UI, Cloud, Business, E-Commerce, etc.
-- **Improve Existing Entries**: Add real-world example sentences, disambiguate contexts, or suggest better preferred translations.
-- **Review Pending Entries**: Participate in Pull Request discussions to review entries in `draft` status.
-- **Add Translation Pairs**: Provide reviewed parallel sentences for the examples dataset.
-- **Build Developer Tools**: Enhance validation scripts, export utilities, RAG examples, or MCP server implementations.
+- **Human-reviewed only.** AI may help you brainstorm, but every Khmer translation must be checked by a proficient Khmer speaker. Unvetted machine translation is not accepted.
+- **Context matters.** Each entry states its domain (`software`, `finance`, …) and the real situation where it is used.
+- **Natural Khmer over literal Khmer.** Prefer how Cambodian professionals actually speak and write, not English grammar in Khmer words.
+- **Clean Unicode.** All Khmer text must be NFC-normalized with valid subscript (Coeng) sequences.
 
 ---
 
-## 3. Terminology Guidelines
+## 2. Ways to contribute
 
-Each term must conform to the JSON schema defined in [`schemas/term.schema.json`](schemas/term.schema.json).
+- **Propose a term.** No coding needed: open a [Term Proposal issue](.github/ISSUE_TEMPLATE/term_proposal.md).
+- **Add or improve entries.** Add terms, example sentences, alternatives, or better usage notes.
+- **Review pull requests.** Native speakers are especially welcome to comment on open terminology PRs. See [review statuses](#8-review-statuses).
+- **Improve tooling.** Validator, build and export scripts, RAG and MCP examples, benchmark.
 
-### Entry Structure Example
+---
+
+## 3. Where does my change go?
+
+| I want to add… | Edit this | Format |
+| :--- | :--- | :--- |
+| A term (e.g. *log in*, *invoice*) | `data/terminology/<domain>/<topic>.json` | [`term.schema.json`](schemas/term.schema.json) |
+| A word that translates differently by context | `data/disambiguation/contexts.json` | [`disambiguation.schema.json`](schemas/disambiguation.schema.json) |
+| A full reviewed sentence pair | `data/examples/reviewed.json` | [`translation.schema.json`](schemas/translation.schema.json) |
+| A benchmark test sentence | `evaluation/benchmark.json` | [`benchmark.schema.json`](schemas/benchmark.schema.json) |
+
+Existing topic files:
+
+| Domain | File | ID prefix |
+| :--- | :--- | :--- |
+| software | `software/auth.json` | `sw-auth-` |
+| software | `software/ui.json` | `sw-ui-` |
+| software | `software/data-cloud.json` | `sw-cloud-` |
+| finance | `finance/banking.json` | `fin-bank-` |
+| ecommerce | `ecommerce/shopping.json` | `ecom-shop-` |
+| business | `business/corporate.json` | `biz-corp-` |
+
+Add to an existing file when the topic fits. To start a new topic, create a new JSON file containing an array, e.g. `software/networking.json` with prefix `sw-net-`.
+
+---
+
+## 4. Adding a terminology entry
+
+Each file in `data/terminology/` is a JSON **array** of entries. Append yours:
+
 ```json
 {
-  "id": "tech-software-authentication",
-  "term": "authentication",
+  "id": "sw-auth-two-factor-auth",
+  "term": "two-factor authentication",
   "sourceLanguage": "en",
-  "preferredKhmer": "ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ",
-  "alternativeKhmer": [
-    "ការផ្ទៀងផ្ទាត់"
-  ],
+  "preferredKhmer": "ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណពីរជំហាន",
+  "alternativeKhmer": [],
   "domain": "software",
-  "context": "security and user login",
+  "context": "Account security settings",
   "partOfSpeech": "noun",
   "examples": [
     {
       "source": "Two-factor authentication is enabled.",
       "khmer": "ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណពីរជំហានត្រូវបានបើកដំណើរការ។",
-      "notes": "Standard security settings context"
+      "notes": "Security settings toggle"
     }
   ],
-  "usageNotes": "Use 'ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ' for identity authentication. Avoid using transliteration.",
+  "usageNotes": "Explain nuances and mistakes AI models should avoid.",
   "status": "draft",
   "provenance": {
     "sourceType": "community",
-    "reference": "Common software security UI convention",
+    "reference": "Where this translation comes from",
     "reviewedBy": [],
     "lastUpdated": "2026-09-28"
   }
 }
 ```
 
----
+Checklist:
 
-## 4. Khmer Orthography & Unicode Requirements
-
-To ensure AI systems, search engines, and RAG pipelines can reliably index and retrieve terms:
-
-1. **Normalization**: All Khmer text must be in **Unicode Normalization Form C (NFC)**.
-2. **Subscript Consonants**: Always use the standard Khmer Coeng sign `\u17D2` (្) followed by the subscript consonant.
-3. **No Orphaned Coeng**: Every `\u17D2` must be followed by a valid Khmer consonant or independent vowel.
-4. **Punctuation**:
-   - Use Khmer Khan (`។` / `\u17D4`) for sentence endings.
-   - Use Bariyoosan (`៕` / `\u17D5`) for end of complete paragraphs/sections when appropriate.
-   - Do not mix Latin periods (`.`) directly into Khmer prose unless formatting technical code/URLs.
-5. Refer to [`docs/khmer-orthography-guide.md`](docs/khmer-orthography-guide.md) for complete details.
+- **`id`**: lowercase kebab-case, unique across the whole dataset, starting with the file's prefix (see the table above).
+- **`status`**: new entries are always `draft`. Reviewers move them up; see [review statuses](#8-review-statuses).
+- **`provenance.sourceType`**: one of `national-council`, `official-glossary`, `academic`, `community`, `translator`. Cite the source in `reference`.
+- **`provenance.lastUpdated`**: today's date as `YYYY-MM-DD`.
+- **Duplicates**: search first. If the term exists, improve that entry instead of adding a second one.
 
 ---
 
-## 5. Contribution Workflow (PRs)
+## 5. Khmer text requirements
 
-1. **Fork the repository** on GitHub.
-2. **Create a descriptive branch**:
+The validator (`npm test`) enforces these rules:
+
+1. **NFC normalization.** All Khmer text must be in Unicode Normalization Form C.
+2. **Valid Coeng.** Every Coeng sign `្` (`U+17D2`) must be followed by a Khmer consonant (`U+1780`–`U+17A2`). Two Coeng signs in a row are not allowed.
+3. **Khmer punctuation.** End Khmer sentences with Khan `។` (`U+17D4`), not a Latin `.`. This is a warning, not an error.
+
+Also follow these conventions (not checked automatically):
+
+- **No invisible characters** such as zero-width spaces (`U+200B`) inside `preferredKhmer`. They break search and retrieval.
+- **Avoid phonetic transliteration** when a Khmer term exists, e.g. write លុប for "delete", not ឌីលេត.
+- **Avoid unnecessary passive voice** (ត្រូវបាន) carried over from English in example sentences.
+- **No English plurals.** Khmer nouns don't take plural endings.
+
+---
+
+## 6. Pull request workflow
+
+1. Fork the repository and create a branch:
    ```bash
-   git checkout -b feat/add-ui-terms
+   git checkout -b feat/add-networking-terms
    ```
-3. **Add or modify files** in `data/terminology/<domain>/...` or `data/examples/...`.
-4. **Run the local validation tool**:
+2. Make your changes (see [section 3](#3-where-does-my-change-go)).
+3. Validate:
    ```bash
    npm test
    ```
-   Ensure all schema tests and Unicode integrity checks pass.
-5. **Commit your changes**:
+   Fix every error. Review the warnings.
+4. Commit using [Conventional Commits](https://www.conventionalcommits.org/) style:
    ```bash
-   git commit -m "feat(terminology): add authentication and authorization UI terms"
+   git commit -m "feat(terminology): add networking terms"
    ```
-6. **Submit a Pull Request**. Fill out the PR template with reference sources and context.
+   Common scopes: `terminology`, `examples`, `disambiguation`, `benchmark`, `docs`, `tools`.
+5. Open a pull request and fill in the template, including your sources.
+
+CI runs `npm test`, `npm run build` and `npm run export` on every pull request.
 
 ---
 
-## 6. Review Process & Statuses
+## 7. Changing the tooling or schemas
 
-Submissions progress through the following statuses:
-
-1. `draft`: Initial community submission submitted via PR.
-2. `community-reviewed`: Reviewed and vetted by at least 2 community contributors.
-3. `expert-reviewed`: Verified by a native linguist, translator, or domain expert against authoritative sources (e.g. National Council of Khmer Language - NCKL).
-4. `verified`: Established standard widely adopted in real-world software and documentation.
-5. `deprecated`: Legacy translation replaced by a more natural or official term.
+- All scripts are dependency-free Node.js (version in `.nvmrc`). Please keep it that way unless there's a strong reason.
+- Shared code lives in `tools/lib/`: `paths.js` holds every file location, and `dataset.js` has the JSON loaders. Use these instead of hard-coding paths or re-implementing file loading.
+- The validator reads its required fields and allowed values (domain, status, part of speech, source type, ID and date patterns) from `schemas/term.schema.json` and `schemas/translation.schema.json`. **The schemas are the single source of truth.**
+- To add a new domain, add it to the `domain` enum in both schemas, and update the domain list in README.md if it changes.
+- `examples/mcp/server.js` uses stdout for protocol messages. Log to `console.error` only.
+- Run `npm run check` (validate, build, export, evaluate) before opening the PR.
 
 ---
 
-## 7. Running Local Validation
+## 8. Review statuses
 
-We provide automated validation scripts built with Node.js:
+Every entry has a `status` that records how thoroughly it has been reviewed:
 
-```bash
-# Validate all data files against JSON schemas and Khmer Unicode rules
-npm test
+| Status | Meaning |
+| :--- | :--- |
+| `draft` | New submission, not yet reviewed. All new entries start here. |
+| `community-reviewed` | Approved by at least 2 community contributors. |
+| `expert-reviewed` | Checked by a native linguist, translator, or domain expert against authoritative sources, e.g. the National Council of Khmer Language (NCKL). |
+| `verified` | Established standard, widely used in real software and documentation. |
+| `deprecated` | Superseded by a better term. Explain the replacement in `usageNotes`. |
 
-# Format and check build outputs
-npm run build
-```
+When reviewing, check:
+
+- **Spelling:** correct according to the Chuon Nath dictionary or NCKL, and passes `npm test`.
+- **Naturalness:** would a Cambodian professional in this field actually say it?
+- **No needless transliteration:** a real Khmer term is used where one exists.
+- **Disambiguation:** if the English word has several meanings, the context is explicit.
+
+When two translations are both in real use, put the one backed by NCKL or the dominant industry standard in `preferredKhmer`. List the other in `alternativeKhmer` with an explanation in `usageNotes`.

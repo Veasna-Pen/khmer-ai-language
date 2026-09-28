@@ -6,7 +6,11 @@
   "scripts": {
     "test": "node tools/validator/validate.js",
     "build": "node tools/compiler/build-dist.js",
-    "export": "node tools/export/export-formats.js"
+    "export": "node tools/export/export-formats.js",
+    "evaluate": "node evaluation/evaluate.js",
+    "check": "npm test && npm run build && npm run export && npm run evaluate",
+    "mcp": "node examples/mcp/server.js",
+    "demo:rag": "node examples/rag/simple-khmer-rag.js"
   },
   "keywords": [
     "khmer",
@@ -23,6 +27,9 @@
   "license": "CC-BY-4.0 AND MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/khmer-ai/khmer-ai-language.git"
+    "url": "https://github.com/Veasna-Pen/khmer-ai-language.git"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

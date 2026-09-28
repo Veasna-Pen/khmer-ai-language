@@ -1,70 +1,54 @@
 #!/usr/bin/env node
-
-/**
- * Khmer AI Language Reference - Format Exporter
- * 
- * Exports the compiled reference dataset into:
- * 1. CSV format (`dist/khmer-ai-reference.csv`)
- * 2. Markdown Glossary (`dist/GLOSSARY.md`)
- */
+// Exports the dist bundle to CSV (Excel-compatible) and a Markdown glossary.
 
 const fs = require('fs');
 const path = require('path');
+const { ROOT, CSV_FILE, GLOSSARY_FILE } = require('../lib/paths');
+const { loadBundle } = require('../lib/dataset');
 
-const ROOT_DIR = path.resolve(__dirname, '../..');
-const DIST_DIR = path.join(ROOT_DIR, 'dist');
-const COMPILED_JSON = path.join(DIST_DIR, 'khmer-ai-reference.json');
+const CSV_COLUMNS = [
+  ['ID', (t) => t.id],
+  ['Term', (t) => t.term],
+  ['Source Language', (t) => t.sourceLanguage || 'en'],
+  ['Preferred Khmer', (t) => t.preferredKhmer],
+  ['Alternative Khmer', (t) => (t.alternativeKhmer || []).join('; ')],
+  ['Domain', (t) => t.domain],
+  ['Context', (t) => t.context],
+  ['Status', (t) => t.status],
+];
 
-function exportFormats() {
-  if (!fs.existsSync(COMPILED_JSON)) {
-    console.log('Dist bundle not found. Running compiler first...');
-    require('../compiler/build-dist.js');
-  }
+const csvCell = (value) => `"${String(value ?? '').replace(/"/g, '""')}"`;
+const mdCell = (value) => String(value).replace(/\|/g, '\\|');
 
-  const raw = fs.readFileSync(COMPILED_JSON, 'utf8');
-  const bundle = JSON.parse(raw);
-  const terms = bundle.terms || [];
-
-  console.log(`Exporting ${terms.length} terms to CSV and Markdown...`);
-
-  // 1. Export CSV
-  const csvHeaders = ['ID', 'Term', 'Source Language', 'Preferred Khmer', 'Alternative Khmer', 'Domain', 'Context', 'Status'];
-  const csvRows = [csvHeaders.join(',')];
-
-  terms.forEach(t => {
-    const row = [
-      `"${t.id || ''}"`,
-      `"${(t.term || '').replace(/"/g, '""')}"`,
-      `"${t.sourceLanguage || 'en'}"`,
-      `"${(t.preferredKhmer || '').replace(/"/g, '""')}"`,
-      `"${(t.alternativeKhmer || []).join('; ').replace(/"/g, '""')}"`,
-      `"${t.domain || ''}"`,
-      `"${(t.context || '').replace(/"/g, '""')}"`,
-      `"${t.status || ''}"`
-    ];
-    csvRows.push(row.join(','));
-  });
-
-  const csvPath = path.join(DIST_DIR, 'khmer-ai-reference.csv');
-  // Include UTF-8 BOM for Microsoft Excel compatibility with Khmer script
-  fs.writeFileSync(csvPath, '\uFEFF' + csvRows.join('\r\n'), 'utf8');
-
-  // 2. Export Markdown Glossary
-  let mdContent = `# Khmer AI Language Reference - Glossary\n\n`;
-  mdContent += `*Total terms: ${terms.length} | Generated: ${bundle.metadata.generatedAt}*\n\n`;
-  mdContent += `| Term (English) | Preferred Khmer | Domain | Context | Status |\n`;
-  mdContent += `| :--- | :--- | :--- | :--- | :--- |\n`;
-
-  terms.forEach(t => {
-    mdContent += `| **${t.term}** | ${t.preferredKhmer} | \`${t.domain}\` | ${t.context || '-'} | \`${t.status}\` |\n`;
-  });
-
-  const mdPath = path.join(DIST_DIR, 'GLOSSARY.md');
-  fs.writeFileSync(mdPath, mdContent, 'utf8');
-
-  console.log(`✔ Successfully exported:`);
-  console.log(`  - ${csvPath}`);
-  console.log(`  - ${mdPath}`);
+function toCsv(terms) {
+  const header = CSV_COLUMNS.map(([name]) => name).join(',');
+  const rows = terms.map((t) => CSV_COLUMNS.map(([, get]) => csvCell(get(t))).join(','));
+  // BOM so Excel detects UTF-8 and renders Khmer correctly.
+  return '﻿' + [header, ...rows].join('\r\n');
 }
 
-exportFormats();
+function toGlossary({ metadata, terms }) {
+  const rows = terms.map((t) =>
+    `| **${mdCell(t.term)}** | ${mdCell(t.preferredKhmer)} | \`${t.domain}\` | ${mdCell(t.context || '-')} | \`${t.status}\` |`
+  );
+  return [
+    '# Khmer AI Language Reference - Glossary',
+    '',
+    `*Total terms: ${terms.length} | Generated: ${metadata.generatedAt}*`,
+    '',
+    '| Term (English) | Preferred Khmer | Domain | Context | Status |',
+    '| :--- | :--- | :--- | :--- | :--- |',
+    ...rows,
+    '',
+  ].join('\n');
+}
+
+if (require.main === module) {
+  const bundle = loadBundle();
+  fs.writeFileSync(CSV_FILE, toCsv(bundle.terms), 'utf8');
+  fs.writeFileSync(GLOSSARY_FILE, toGlossary(bundle), 'utf8');
+  console.log(`✔ Exported ${bundle.terms.length} terms:`);
+  for (const file of [CSV_FILE, GLOSSARY_FILE]) console.log(`  - ${path.relative(ROOT, file)}`);
+}
+
+module.exports = { toCsv, toGlossary };

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/khmer-ai/khmer-ai-language/main/schemas/disambiguation.schema.json",
+  "title": "KhmerDisambiguationEntry",
+  "description": "Schema for a polysemous source word whose Khmer translation depends on context.",
+  "type": "object",
+  "required": [
+    "term",
+    "disambiguations"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "term": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Source word in lowercase (e.g. 'account')."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Short explanation of why the word is ambiguous."
+    },
+    "disambiguations": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["context", "khmer"],
+        "additionalProperties": false,
+        "properties": {
+          "context": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Usage context (e.g. 'Banking / Finance')."
+          },
+          "khmer": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Khmer translation for this context in Unicode NFC."
+          },
+          "exampleSource": {
+            "type": "string",
+            "description": "Example sentence in the source language."
+          },
+          "exampleKhmer": {
+            "type": "string",
+            "description": "Khmer translation of the example sentence."
+          }
+        }
+      }
+    }
+  }
+}

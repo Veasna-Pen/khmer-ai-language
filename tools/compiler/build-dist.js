@@ -1,86 +1,40 @@
 #!/usr/bin/env node
-
-/**
- * Khmer AI Language Reference - Distribution Compiler
- * 
- * Aggregates all modular terminology files from `data/terminology/**`
- * into a single unified JSON distribution bundle: `dist/khmer-ai-reference.json`
- */
+// Merges data/terminology/** into dist/khmer-ai-reference.json and its minified copy.
 
 const fs = require('fs');
 const path = require('path');
-
-const ROOT_DIR = path.resolve(__dirname, '../..');
-const DATA_DIR = path.join(ROOT_DIR, 'data');
-const DIST_DIR = path.join(ROOT_DIR, 'dist');
-
-function ensureDirectoryExists(dir) {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-}
-
-function collectTerms(dir) {
-  let terms = [];
-  if (!fs.existsSync(dir)) return terms;
-
-  const items = fs.readdirSync(dir, { withFileTypes: true });
-  for (const item of items) {
-    const fullPath = path.join(dir, item.name);
-    if (item.isDirectory()) {
-      terms = terms.concat(collectTerms(fullPath));
-    } else if (item.isFile() && item.name.endsWith('.json')) {
-      try {
-        const content = fs.readFileSync(fullPath, 'utf8');
-        const data = JSON.parse(content);
-        if (Array.isArray(data)) {
-          terms = terms.concat(data);
-        }
-      } catch (err) {
-        console.error(`Failed to parse ${fullPath}:`, err.message);
-      }
-    }
-  }
-  return terms;
-}
+const { ROOT, DIST_DIR, BUNDLE_FILE, BUNDLE_MIN_FILE } = require('../lib/paths');
+const { loadTerms } = require('../lib/dataset');
+const { version } = require('../../package.json');
 
 function build() {
-  console.log('Compiling Khmer AI Language Reference distribution...');
-  ensureDirectoryExists(DIST_DIR);
+  const terms = loadTerms().sort((a, b) => a.term.localeCompare(b.term));
 
-  const termDir = path.join(DATA_DIR, 'terminology');
-  const allTerms = collectTerms(termDir);
-
-  // Sort terms alphabetically by source term
-  allTerms.sort((a, b) => a.term.localeCompare(b.term));
-
-  const domainBreakdown = {};
-  allTerms.forEach(t => {
-    domainBreakdown[t.domain] = (domainBreakdown[t.domain] || 0) + 1;
-  });
+  const domains = {};
+  for (const term of terms) domains[term.domain] = (domains[term.domain] || 0) + 1;
 
   const bundle = {
     metadata: {
-      name: "Khmer AI Language Reference",
-      version: require('../../package.json').version,
+      name: 'Khmer AI Language Reference',
+      version,
       generatedAt: new Date().toISOString(),
-      license: "CC-BY-4.0",
-      totalTerms: allTerms.length,
-      domains: domainBreakdown
+      license: 'CC-BY-4.0',
+      totalTerms: terms.length,
+      domains,
     },
-    terms: allTerms
+    terms,
   };
 
-  const distPath = path.join(DIST_DIR, 'khmer-ai-reference.json');
-  fs.writeFileSync(distPath, JSON.stringify(bundle, null, 2), 'utf8');
-
-  // Also write minified version for low-bandwidth / production RAG use
-  const minPath = path.join(DIST_DIR, 'khmer-ai-reference.min.json');
-  fs.writeFileSync(minPath, JSON.stringify(bundle), 'utf8');
-
-  console.log(`✔ Successfully built distribution:`);
-  console.log(`  - ${distPath} (${allTerms.length} terms)`);
-  console.log(`  - ${minPath}`);
+  fs.mkdirSync(DIST_DIR, { recursive: true });
+  fs.writeFileSync(BUNDLE_FILE, JSON.stringify(bundle, null, 2), 'utf8');
+  fs.writeFileSync(BUNDLE_MIN_FILE, JSON.stringify(bundle), 'utf8');
+  return bundle;
 }
 
-build();
+if (require.main === module) {
+  const { terms } = build();
+  console.log(`✔ Built ${terms.length} terms:`);
+  for (const file of [BUNDLE_FILE, BUNDLE_MIN_FILE]) console.log(`  - ${path.relative(ROOT, file)}`);
+}
+
+module.exports = { build };

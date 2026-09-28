@@ -1,9 +1,1 @@
-# Set default behavior to automatically normalize line endings
 * text=auto eol=lf
-
-# Explicitly ensure JSON, Markdown, and JS files use UTF-8 and LF
-*.json text working-tree-encoding=UTF-8 eol=lf
-*.md text working-tree-encoding=UTF-8 eol=lf
-*.js text eol=lf
-*.yml text eol=lf
-*.yaml text eol=lf

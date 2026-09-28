@@ -1,29 +1,32 @@
-name: Validate Khmer AI Language Reference Data
+name: Validate
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
+
+permissions:
+  contents: read
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
 
-    - name: Validate dataset schemas and Unicode integrity
-      run: npm test
+      - name: Validate dataset
+        run: npm test
 
-    - name: Build distribution artifacts
-      run: npm run build
+      - name: Build distribution bundle
+        run: npm run build
 
-    - name: Export multi-format releases
-      run: npm run export
+      - name: Export CSV and glossary
+        run: npm run export
+
+      - name: Run benchmark scorer
+        run: npm run evaluate

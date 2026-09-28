@@ -10,7 +10,7 @@ assignees: ''
 <!-- e.g. "two-factor authentication" -->
 
 ### Domain
-<!-- e.g. software, technology, business, finance, ecommerce -->
+<!-- one of: software, technology, business, finance, ecommerce, general, legal, healthcare, education -->
 
 ### Context
 <!-- e.g. user security settings, checkout flow, cloud computing -->
