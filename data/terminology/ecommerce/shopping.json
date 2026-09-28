@@ -16,11 +16,11 @@
       }
     ],
     "usageNotes": "'កន្ត្រកទំនិញ' is standard across Cambodian e-commerce platforms. Avoid using 'រទេះរុញ' (supermarket physical trolley) in digital mobile apps unless specifically intended.",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "E-commerce Localization Conventions",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -41,11 +41,11 @@
       }
     ],
     "usageNotes": "For action buttons, use 'ទូទាត់ប្រាក់'. For checkout flow/pages, 'ការទូទាត់ប្រាក់' is standard. Do not confuse with hotel checkout (ចាកចេញពីសណ្ឋាគារ).",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "E-commerce Localization Standards",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -66,11 +66,11 @@
       }
     ],
     "usageNotes": "In e-commerce, always use 'ការបញ្ជាទិញ'. Do not use 'បញ្ជា' (military command) or 'លំដាប់' (sorting sequence).",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "NCKL & E-commerce Standards",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -91,11 +91,11 @@
       }
     ],
     "usageNotes": "Standard delivery terminology nationwide.",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "E-commerce Standards",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -116,11 +116,11 @@
       }
     ],
     "usageNotes": "Use 'លេខតាមដានកញ្ចប់ទំនិញ' for clarity in parcel delivery.",
-    "status": "expert-reviewed",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "Logistics & Delivery Conventions",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -141,11 +141,11 @@
       }
     ],
     "usageNotes": "'ការសងប្រាក់វិញ' or 'ការបង្វិលប្រាក់' are both accepted standard terms.",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "NCKL standards",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   }

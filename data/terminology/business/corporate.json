@@ -16,11 +16,11 @@
       }
     ],
     "usageNotes": "Standard term officially defined by General Department of Taxation (GDT) and NCKL. Do not confuse with receipt (បង្កាន់ដៃទទួលប្រាក់).",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "General Department of Taxation & NCKL",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -41,11 +41,11 @@
       }
     ],
     "usageNotes": "An invoice is a bill for payment (វិក្កយបត្រ); a receipt is proof that payment has been made (បង្កាន់ដៃទទួលប្រាក់).",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "NCKL standards",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -66,11 +66,11 @@
       }
     ],
     "usageNotes": "Universal legal and business standard term.",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "Ministry of Commerce & NCKL",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -91,11 +91,11 @@
       }
     ],
     "usageNotes": "Standard term used in Cambodian corporate, NGO, and government sectors.",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "NCKL standards",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -116,11 +116,11 @@
       }
     ],
     "usageNotes": "Official legal and regulatory terminology nationwide.",
-    "status": "expert-reviewed",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "NCKL Legal Lexicon",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   }

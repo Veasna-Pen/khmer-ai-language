@@ -16,11 +16,11 @@
       }
     ],
     "usageNotes": "Standard National Bank of Cambodia (NBC) and commercial banking term nationwide.",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "National Bank of Cambodia Banking Lexicon",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -41,11 +41,11 @@
       }
     ],
     "usageNotes": "Standard financial and database term.",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "NBC standards",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -66,11 +66,11 @@
       }
     ],
     "usageNotes": "In financial contexts, 'ផ្ទេរប្រាក់' specifically denotes fund transfer (as opposed to generic data transfer 'ផ្ទេរទិន្នន័យ').",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "NBC standards",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -91,11 +91,11 @@
       }
     ],
     "usageNotes": "Official NBC standard term.",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "National Bank of Cambodia",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -116,11 +116,11 @@
       }
     ],
     "usageNotes": "Standard commercial banking phrasing in Cambodia.",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "NBC standards",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   },
@@ -141,11 +141,11 @@
       }
     ],
     "usageNotes": "For the transaction action use 'ការដាក់ប្រាក់'. For deposit accounts/balances use 'ប្រាក់បញ្ញើ'.",
-    "status": "verified",
+    "status": "draft",
     "provenance": {
       "sourceType": "official-glossary",
       "reference": "NBC standards",
-      "reviewedBy": ["Khmer AI Working Group"],
+      "reviewedBy": [],
       "lastUpdated": "2026-09-28"
     }
   }

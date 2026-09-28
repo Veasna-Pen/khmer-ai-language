@@ -15,10 +15,10 @@ function findRelevantTerms(terms, text, domain = null) {
 function buildAugmentedPrompt(terms, sentence, domain = null) {
   const matches = findRelevantTerms(terms, sentence, domain);
   const glossary = matches.length
-    ? 'CRITICAL: Before translating, adhere strictly to these verified Khmer terms:\n' +
+    ? 'CRITICAL: Before translating, adhere strictly to these preferred Khmer terms:\n' +
       matches.map((t) => `- "${t.term}" -> "${t.preferredKhmer}" [Domain: ${t.domain}, Context: ${t.context || 'general'}]\n`).join('') +
       '\n'
-    : 'No specific verified terminology match found. Use natural Khmer phrasing.\n\n';
+    : 'No specific terminology match found. Use natural Khmer phrasing.\n\n';
 
   return [
     'You are an expert translator specializing in natural, accurate Khmer.\n\n',

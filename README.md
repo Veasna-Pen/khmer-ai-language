@@ -47,6 +47,8 @@ Natural, consistent Khmer output
 
 Current domains: `software`, `finance`, `ecommerce`, `business`. The schema also reserves `technology`, `general`, `legal`, `healthcare` and `education` for future contributions.
 
+> **Review status:** every entry is currently `draft`. The seed data has not yet been reviewed by named Khmer speakers, so treat it as suggestions until entries move to `community-reviewed` or higher. Reviewers are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md#8-review-statuses).
+
 ### Example term entry
 
 ```json
@@ -67,11 +69,11 @@ Current domains: `software`, `finance`, `ecommerce`, `business`. The schema also
     }
   ],
   "usageNotes": "Always prefer 'ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ' over literal or phonetic transliteration.",
-  "status": "verified",
+  "status": "draft",
   "provenance": {
     "sourceType": "official-glossary",
     "reference": "National Council of Khmer Language (NCKL) & Tech Lexicons",
-    "reviewedBy": ["Khmer AI Working Group"],
+    "reviewedBy": [],
     "lastUpdated": "2026-09-28"
   }
 }
@@ -90,7 +92,7 @@ Copy the relevant terms into your LLM prompt:
 ```text
 Translate the following sentence into Khmer.
 
-Use these verified Khmer terms:
+Use these preferred Khmer terms:
 - "two-factor authentication" -> "ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណពីរជំហាន"
 - "reset password" -> "កំណត់ពាក្យសម្ងាត់ឡើងវិញ"
 

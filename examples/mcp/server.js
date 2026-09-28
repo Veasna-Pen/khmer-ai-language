@@ -18,7 +18,7 @@ const stringArg = (description) => ({ type: 'string', description });
 
 const TOOLS = {
   search_khmer_terminology: {
-    description: 'Search verified Khmer translations, preferred terms, and usage notes for a source term.',
+    description: 'Search Khmer translations, preferred terms, review status, and usage notes for a source term.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -33,7 +33,7 @@ const TOOLS = {
         (contains(t.term, q) || (t.alternativeKhmer || []).some((k) => k.includes(q))) &&
         (!domain || t.domain.toLowerCase() === domain.toLowerCase())
       );
-      if (!matches.length) return textResult(`No verified terminology found for "${query}".`);
+      if (!matches.length) return textResult(`No terminology found for "${query}".`);
 
       return textResult(matches.map((m) => [
         `Term: ${m.term}`,
