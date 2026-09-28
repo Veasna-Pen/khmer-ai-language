@@ -68,6 +68,63 @@
         "verified",
         "deprecated"
       ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reference": {
+          "type": "string",
+          "description": "Optional citation, e.g. where the source sentence or translation was published."
+        },
+        "reviewedBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "GitHub handles of the reviewers of this example. Every handle must be listed in data/reviewers.json."
+        },
+        "lastUpdated": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "description": "Date of the last real change or review, YYYY-MM-DD."
+        }
+      }
     }
-  }
+  },
+  "allOf": [
+    {
+      "description": "Community review needs at least 2 named reviewers.",
+      "if": {
+        "required": ["status"],
+        "properties": { "status": { "enum": ["community-reviewed"] } }
+      },
+      "then": {
+        "required": ["provenance"],
+        "properties": {
+          "provenance": {
+            "required": ["reviewedBy"],
+            "properties": { "reviewedBy": { "minItems": 2 } }
+          }
+        }
+      }
+    },
+    {
+      "description": "Expert-reviewed and verified examples need at least one reviewer who is an expert for the example's domain in data/reviewers.json.",
+      "if": {
+        "required": ["status"],
+        "properties": { "status": { "enum": ["expert-reviewed", "verified"] } }
+      },
+      "then": {
+        "required": ["provenance"],
+        "properties": {
+          "provenance": {
+            "x-requiresReviewerLevel": "expert",
+            "required": ["reviewedBy"],
+            "properties": { "reviewedBy": { "minItems": 1 } }
+          }
+        }
+      }
+    }
+  ]
 }

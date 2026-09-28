@@ -9,7 +9,8 @@
     "context": "Security account recovery flow",
     "keyTerms": ["reset password", "verification link", "registered email"],
     "notes": "Natural phrasing avoiding literal passive voice over-complication.",
-    "status": "draft"
+    "status": "draft",
+    "provenance": { "reviewedBy": [] }
   },
   {
     "id": "ex-sw-mfa-prompt",
@@ -21,7 +22,8 @@
     "context": "Security requirement notification",
     "keyTerms": ["two-factor authentication", "account settings"],
     "notes": "Uses natural active Khmer sentence structure 'តម្រូវឱ្យមាន...'.",
-    "status": "draft"
+    "status": "draft",
+    "provenance": { "reviewedBy": [] }
   },
   {
     "id": "ex-ecom-order-shipped",
@@ -33,7 +35,8 @@
     "context": "Delivery notification message",
     "keyTerms": ["order", "shipped"],
     "notes": "Clear, friendly customer communication style.",
-    "status": "draft"
+    "status": "draft",
+    "provenance": { "reviewedBy": [] }
   },
   {
     "id": "ex-fin-transfer-success",
@@ -45,7 +48,8 @@
     "context": "Mobile banking receipt toast",
     "keyTerms": ["fund transfer", "completed successfully"],
     "notes": "Standard Cambodian mobile banking success message.",
-    "status": "draft"
+    "status": "draft",
+    "provenance": { "reviewedBy": [] }
   },
   {
     "id": "ex-biz-contract-clause",
@@ -57,6 +61,7 @@
     "context": "Corporate governance guideline",
     "keyTerms": ["stakeholders", "contract", "execution"],
     "notes": "Formal business Khmer standard.",
-    "status": "draft"
+    "status": "draft",
+    "provenance": { "reviewedBy": [] }
   }
 ]

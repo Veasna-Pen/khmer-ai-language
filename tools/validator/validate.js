@@ -20,13 +20,14 @@ const benchmarkTermSchema = benchmarkSchema.properties.requiredTerminology.items
 const ID_PATTERN = new RegExp(termProps.id.pattern);
 const BENCHMARK_ID_PATTERN = new RegExp(benchmarkSchema.properties.id.pattern);
 const DATE_PATTERN = new RegExp(provenanceSchema.properties.lastUpdated.pattern);
+const EXAMPLE_DATE_PATTERN = new RegExp(exampleSchema.properties.provenance.properties.lastUpdated.pattern);
 const HANDLE_PATTERN = new RegExp(reviewerSchema.properties.handle.pattern);
 const JOINED_PATTERN = new RegExp(reviewerSchema.properties.joined.pattern);
 const COENG = '្';
 const KHMER_CONSONANT = /[ក-អ]/;
 
-// Status-dependent provenance requirements, from the term schema's allOf if/then blocks.
-const REVIEW_RULES = (termSchema.allOf || []).map(({ if: condition, then: requirement }) => {
+// Status-dependent provenance requirements, from a schema's allOf if/then blocks.
+const reviewRulesFrom = (schema) => (schema.allOf || []).map(({ if: condition, then: requirement }) => {
   const provenance = requirement.properties.provenance;
   return {
     statuses: condition.properties.status.enum,
@@ -35,6 +36,8 @@ const REVIEW_RULES = (termSchema.allOf || []).map(({ if: condition, then: requir
     reviewerLevel: provenance['x-requiresReviewerLevel'],
   };
 });
+const TERM_REVIEW_RULES = reviewRulesFrom(termSchema);
+const EXAMPLE_REVIEW_RULES = reviewRulesFrom(exampleSchema);
 
 const errors = [];
 const warnings = [];
@@ -100,7 +103,7 @@ function checkKhmerSentence(text, field, loc) {
   }
 }
 
-function checkReviewRules(entry, loc) {
+function checkReviewRules(entry, rules, loc) {
   const provenance = entry.provenance || {};
   const reviewers = asArray(provenance.reviewedBy).filter((name) => typeof name === 'string' && name.trim());
   for (const name of reviewers) {
@@ -109,7 +112,7 @@ function checkReviewRules(entry, loc) {
     }
   }
 
-  for (const rule of REVIEW_RULES) {
+  for (const rule of rules) {
     if (!rule.statuses.includes(entry.status)) continue;
     for (const field of rule.required) {
       if (field === 'reviewedBy') continue; // counted below
@@ -151,7 +154,7 @@ function validateTerm(entry, loc) {
       errors.push(`[Invalid Date] in ${loc}: "provenance.lastUpdated" must follow YYYY-MM-DD format.`);
     }
   }
-  checkReviewRules(entry, loc);
+  checkReviewRules(entry, TERM_REVIEW_RULES, loc);
 
   checkKhmerText(entry.preferredKhmer, 'preferredKhmer', loc);
   asArray(entry.alternativeKhmer).forEach((alt, i) => checkKhmerText(alt, `alternativeKhmer[${i}]`, loc));
@@ -166,6 +169,13 @@ function validateTerm(entry, loc) {
 function validateExample(entry, loc) {
   stats.examples++;
   checkRequired(entry, exampleSchema.required, loc);
+  checkEnum(entry.domain, exampleSchema.properties.domain.enum, 'domain', loc);
+  checkEnum(entry.status, exampleSchema.properties.status.enum, 'status', loc);
+  const { lastUpdated } = entry.provenance || {};
+  if (lastUpdated && !EXAMPLE_DATE_PATTERN.test(lastUpdated)) {
+    errors.push(`[Invalid Date] in ${loc}: "provenance.lastUpdated" must follow YYYY-MM-DD format.`);
+  }
+  checkReviewRules(entry, EXAMPLE_REVIEW_RULES, loc);
   checkKhmerText(entry.translation, 'translation', loc);
 }
 

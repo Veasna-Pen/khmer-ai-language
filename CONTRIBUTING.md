@@ -182,13 +182,13 @@ Every entry has a `status` that records how thoroughly it has been reviewed:
 | `verified` | Established standard, widely used in real software and documentation. |
 | `deprecated` | Superseded by a better term. Explain the replacement in `usageNotes`. |
 
-Who can set each status, and what `npm test` checks. Every handle in `reviewedBy` must be on the roster in [`data/reviewers.json`](data/reviewers.json):
+Who can set each status, and what `npm test` checks. The same rules apply to terms and to translation examples in `data/examples/`; both record reviewers in `provenance.reviewedBy`. Every handle there must be on the roster in [`data/reviewers.json`](data/reviewers.json):
 
 | Status | Who can set it | Checked by `npm test` |
 | :--- | :--- | :--- |
 | `draft` | Any contributor | — |
 | `community-reviewed` | 2 reviewers of any level | At least 2 roster handles in `reviewedBy` |
-| `expert-reviewed` | An expert reviewer for the entry's domain | A `reference`, and a roster `expert` whose `domains` include the entry's domain |
+| `expert-reviewed` | An expert reviewer for the entry's domain | A roster `expert` whose `domains` include the entry's domain. Terms also need a `reference`; examples don't, since they're usually original translations |
 | `verified` | An expert reviewer for the entry's domain, with a maintainer's sign-off | Same as `expert-reviewed` |
 | `deprecated` | Maintainers | — |
 
