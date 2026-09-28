@@ -1,0 +1,152 @@
+[
+  {
+    "id": "ecom-shop-cart",
+    "term": "cart",
+    "sourceLanguage": "en",
+    "preferredKhmer": "កន្ត្រកទំនិញ",
+    "alternativeKhmer": ["កន្ត្រក"],
+    "domain": "ecommerce",
+    "context": "E-commerce shopping cart",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Item added to your cart.",
+        "khmer": "ទំនិញត្រូវបានបន្ថែមទៅក្នុងកន្ត្រករបស់អ្នក។",
+        "notes": "Toast notification"
+      }
+    ],
+    "usageNotes": "'កន្ត្រកទំនិញ' is standard across Cambodian e-commerce platforms. Avoid using 'រទេះរុញ' (supermarket physical trolley) in digital mobile apps unless specifically intended.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "E-commerce Localization Conventions",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "ecom-shop-checkout",
+    "term": "checkout",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ទូទាត់ប្រាក់",
+    "alternativeKhmer": ["ដំណើរការទូទាត់ប្រាក់"],
+    "domain": "ecommerce",
+    "context": "E-commerce checkout CTA button and flow",
+    "partOfSpeech": "verb",
+    "examples": [
+      {
+        "source": "Proceed to checkout.",
+        "khmer": "បន្តទៅការទូទាត់ប្រាក់។",
+        "notes": "Shopping cart CTA button"
+      }
+    ],
+    "usageNotes": "For action buttons, use 'ទូទាត់ប្រាក់'. For checkout flow/pages, 'ការទូទាត់ប្រាក់' is standard. Do not confuse with hotel checkout (ចាកចេញពីសណ្ឋាគារ).",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "E-commerce Localization Standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "ecom-shop-order",
+    "term": "order",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ការបញ្ជាទិញ",
+    "alternativeKhmer": [],
+    "domain": "ecommerce",
+    "context": "Customer purchase order",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Your order has been confirmed.",
+        "khmer": "ការបញ្ជាទិញរបស់អ្នកត្រូវបានបញ្ជាក់ហើយ។",
+        "notes": "Order confirmation banner"
+      }
+    ],
+    "usageNotes": "In e-commerce, always use 'ការបញ្ជាទិញ'. Do not use 'បញ្ជា' (military command) or 'លំដាប់' (sorting sequence).",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL & E-commerce Standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "ecom-shop-shipping-address",
+    "term": "shipping address",
+    "sourceLanguage": "en",
+    "preferredKhmer": "អាសយដ្ឋានដឹកជញ្ជូន",
+    "alternativeKhmer": [],
+    "domain": "ecommerce",
+    "context": "Checkout delivery details",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Enter your shipping address.",
+        "khmer": "បញ្ចូលអាសយដ្ឋានដឹកជញ្ជូនរបស់អ្នក។",
+        "notes": "Form field header"
+      }
+    ],
+    "usageNotes": "Standard delivery terminology nationwide.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "E-commerce Standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "ecom-shop-tracking-number",
+    "term": "tracking number",
+    "sourceLanguage": "en",
+    "preferredKhmer": "លេខតាមដានកញ្ចប់ទំនិញ",
+    "alternativeKhmer": ["លេខកូដតាមដាន"],
+    "domain": "ecommerce",
+    "context": "Logistics and shipping tracking",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Your package tracking number is #KH12345.",
+        "khmer": "លេខតាមដានកញ្ចប់ទំនិញរបស់អ្នកគឺ #KH12345។",
+        "notes": "Order status email"
+      }
+    ],
+    "usageNotes": "Use 'លេខតាមដានកញ្ចប់ទំនិញ' for clarity in parcel delivery.",
+    "status": "expert-reviewed",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "Logistics & Delivery Conventions",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "ecom-shop-refund",
+    "term": "refund",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ការសងប្រាក់វិញ",
+    "alternativeKhmer": ["បង្វិលប្រាក់"],
+    "domain": "ecommerce",
+    "context": "Order cancellation and return compensation",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Refund will be processed within 3-5 business days.",
+        "khmer": "ការសងប្រាក់វិញនឹងត្រូវបានដំណើរការក្នុងរយៈពេល ៣ ទៅ ៥ ថ្ងៃនៃថ្ងៃធ្វើការ។",
+        "notes": "Refund policy notification"
+      }
+    ],
+    "usageNotes": "'ការសងប្រាក់វិញ' or 'ការបង្វិលប្រាក់' are both accepted standard terms.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  }
+]

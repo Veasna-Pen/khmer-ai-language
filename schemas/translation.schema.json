@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/khmer-ai/khmer-ai-language/main/schemas/translation.schema.json",
+  "title": "KhmerTranslationExample",
+  "description": "Schema for reviewed parallel translation examples.",
+  "type": "object",
+  "required": [
+    "id",
+    "source",
+    "sourceLanguage",
+    "targetLanguage",
+    "translation",
+    "domain",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceLanguage": {
+      "type": "string",
+      "default": "en"
+    },
+    "targetLanguage": {
+      "type": "string",
+      "default": "km"
+    },
+    "translation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "software",
+        "technology",
+        "business",
+        "finance",
+        "ecommerce",
+        "general",
+        "legal",
+        "healthcare",
+        "education"
+      ]
+    },
+    "context": {
+      "type": "string"
+    },
+    "keyTerms": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "community-reviewed",
+        "expert-reviewed",
+        "verified",
+        "deprecated"
+      ]
+    }
+  }
+}

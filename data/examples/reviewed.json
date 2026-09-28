@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ex-sw-reset-pw",
+    "source": "Reset your password using the verification link sent to your registered email.",
+    "sourceLanguage": "en",
+    "targetLanguage": "km",
+    "translation": "កំណត់ពាក្យសម្ងាត់របស់អ្នកឡើងវិញដោយប្រើតំណភ្ជាប់ផ្ទៀងផ្ទាត់ដែលបានផ្ញើទៅកាន់អ៊ីមែលដែលបានចុះឈ្មោះរបស់អ្នក។",
+    "domain": "software",
+    "context": "Security account recovery flow",
+    "keyTerms": ["reset password", "verification link", "registered email"],
+    "notes": "Natural phrasing avoiding literal passive voice over-complication.",
+    "status": "verified"
+  },
+  {
+    "id": "ex-sw-mfa-prompt",
+    "source": "Two-factor authentication is required to access your account settings.",
+    "sourceLanguage": "en",
+    "targetLanguage": "km",
+    "translation": "តម្រូវឱ្យមានការផ្ទៀងផ្ទាត់អត្តសញ្ញាណពីរជំហានដើម្បីចូលប្រើប្រាស់ការកំណត់គណនីរបស់អ្នក។",
+    "domain": "software",
+    "context": "Security requirement notification",
+    "keyTerms": ["two-factor authentication", "account settings"],
+    "notes": "Uses natural active Khmer sentence structure 'តម្រូវឱ្យមាន...'.",
+    "status": "verified"
+  },
+  {
+    "id": "ex-ecom-order-shipped",
+    "source": "Your order has been shipped and is expected to arrive within two days.",
+    "sourceLanguage": "en",
+    "targetLanguage": "km",
+    "translation": "ការបញ្ជាទិញរបស់អ្នកត្រូវបានដឹកជញ្ជូនហើយ និងរំពឹងថានឹងមកដល់ក្នុងរយៈពេលពីរថ្ងៃ។",
+    "domain": "ecommerce",
+    "context": "Delivery notification message",
+    "keyTerms": ["order", "shipped"],
+    "notes": "Clear, friendly customer communication style.",
+    "status": "verified"
+  },
+  {
+    "id": "ex-fin-transfer-success",
+    "source": "The fund transfer of $250.00 was completed successfully.",
+    "sourceLanguage": "en",
+    "targetLanguage": "km",
+    "translation": "ការផ្ទេរប្រាក់ចំនួន $250.00 ត្រូវបានបញ្ចប់ដោយជោគជ័យ។",
+    "domain": "finance",
+    "context": "Mobile banking receipt toast",
+    "keyTerms": ["fund transfer", "completed successfully"],
+    "notes": "Standard Cambodian mobile banking success message.",
+    "status": "verified"
+  },
+  {
+    "id": "ex-biz-contract-clause",
+    "source": "All key stakeholders must review and approve the project contract before execution.",
+    "sourceLanguage": "en",
+    "targetLanguage": "km",
+    "translation": "ភាគីពាក់ព័ន្ធសំខាន់ៗទាំងអស់ត្រូវតែពិនិត្យ និងអនុម័តកិច្ចសន្យាគម្រោងមុនពេលអនុវត្ត។",
+    "domain": "business",
+    "context": "Corporate governance guideline",
+    "keyTerms": ["stakeholders", "contract", "execution"],
+    "notes": "Formal business Khmer standard.",
+    "status": "verified"
+  }
+]

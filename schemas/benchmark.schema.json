@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/khmer-ai/khmer-ai-language/main/schemas/benchmark.schema.json",
+  "title": "KhmerEvaluationBenchmarkEntry",
+  "description": "Schema for benchmark test items evaluating AI Khmer translation quality.",
+  "type": "object",
+  "required": [
+    "id",
+    "prompt",
+    "domain",
+    "expectedKhmer",
+    "requiredTerminology",
+    "pitfallsToAvoid"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Source test sentence to be translated by the AI model."
+    },
+    "sourceLanguage": {
+      "type": "string",
+      "default": "en"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "context": {
+      "type": "string"
+    },
+    "expectedKhmer": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human gold-standard reference translation."
+    },
+    "acceptableAlternatives": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "requiredTerminology": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["term", "khmer"],
+        "properties": {
+          "term": { "type": "string" },
+          "khmer": { "type": "string" },
+          "pattern": { "type": "string" }
+        }
+      },
+      "description": "Specific terms that must appear in the output for a passing score."
+    },
+    "pitfallsToAvoid": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Phrases, literal translations, or unnatural syntax that indicate failure."
+    }
+  }
+}

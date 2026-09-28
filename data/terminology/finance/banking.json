@@ -1,0 +1,152 @@
+[
+  {
+    "id": "fin-bank-balance",
+    "term": "account balance",
+    "sourceLanguage": "en",
+    "preferredKhmer": "សមតុល្យគណនី",
+    "alternativeKhmer": ["សមតុល្យ"],
+    "domain": "finance",
+    "context": "Bank account overview and statement",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Your current account balance is $150.00.",
+        "khmer": "សមតុល្យគណនីបច្ចុប្បន្នរបស់អ្នកគឺ $150.00។",
+        "notes": "Banking home screen"
+      }
+    ],
+    "usageNotes": "Standard National Bank of Cambodia (NBC) and commercial banking term nationwide.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "National Bank of Cambodia Banking Lexicon",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "fin-bank-transaction",
+    "term": "transaction",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ប្រតិបត្តិការ",
+    "alternativeKhmer": ["ប្រតិបត្តិការហិរញ្ញវត្ថុ"],
+    "domain": "finance",
+    "context": "Financial transaction and payment ledger",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Transaction history for the last 30 days.",
+        "khmer": "ប្រវត្តិប្រតិបត្តិការសម្រាប់រយៈពេល ៣០ ថ្ងៃចុងក្រោយ។",
+        "notes": "Transaction list heading"
+      }
+    ],
+    "usageNotes": "Standard financial and database term.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NBC standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "fin-bank-transfer",
+    "term": "transfer",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ផ្ទេរប្រាក់",
+    "alternativeKhmer": ["ការផ្ទេរ"],
+    "domain": "finance",
+    "context": "Money transfer action and service",
+    "partOfSpeech": "verb",
+    "examples": [
+      {
+        "source": "Transfer money to another bank account.",
+        "khmer": "ផ្ទេរប្រាក់ទៅកាន់គណនីធនាគារផ្សេងទៀត។",
+        "notes": "Banking menu action"
+      }
+    ],
+    "usageNotes": "In financial contexts, 'ផ្ទេរប្រាក់' specifically denotes fund transfer (as opposed to generic data transfer 'ផ្ទេរទិន្នន័យ').",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NBC standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "fin-bank-exchange-rate",
+    "term": "exchange rate",
+    "sourceLanguage": "en",
+    "preferredKhmer": "អត្រាប្តូរប្រាក់",
+    "alternativeKhmer": [],
+    "domain": "finance",
+    "context": "Foreign currency exchange",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Check the daily currency exchange rate.",
+        "khmer": "ពិនិត្យមើលអត្រាប្តូរប្រាក់រូបិយប័ណ្ណប្រចាំថ្ងៃ។",
+        "notes": "NBC daily rates table"
+      }
+    ],
+    "usageNotes": "Official NBC standard term.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "National Bank of Cambodia",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "fin-bank-statement",
+    "term": "bank statement",
+    "sourceLanguage": "en",
+    "preferredKhmer": "របាយការណ៍ធនាគារ",
+    "alternativeKhmer": ["របាយការណ៍គណនី"],
+    "domain": "finance",
+    "context": "Monthly account summary document",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Download your monthly bank statement.",
+        "khmer": "ទាញយករបាយការណ៍ធនាគារប្រចាំខែរបស់អ្នក។",
+        "notes": "Banking portal download link"
+      }
+    ],
+    "usageNotes": "Standard commercial banking phrasing in Cambodia.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NBC standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "fin-bank-deposit",
+    "term": "deposit",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ការដាក់ប្រាក់",
+    "alternativeKhmer": ["ប្រាក់បញ្ញើ"],
+    "domain": "finance",
+    "context": "Banking transaction and account type",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Fixed deposit account offers higher interest.",
+        "khmer": "គណនីប្រាក់បញ្ញើសន្សំមានកាលកំណត់ផ្តល់ការប្រាក់ខ្ពស់ជាង។",
+        "notes": "Product comparison"
+      }
+    ],
+    "usageNotes": "For the transaction action use 'ការដាក់ប្រាក់'. For deposit accounts/balances use 'ប្រាក់បញ្ញើ'.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NBC standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  }
+]

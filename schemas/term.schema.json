@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/khmer-ai/khmer-ai-language/main/schemas/term.schema.json",
+  "title": "KhmerTerminologyEntry",
+  "description": "Schema for a single terminology reference entry in the Khmer AI Language Reference.",
+  "type": "object",
+  "required": [
+    "id",
+    "term",
+    "sourceLanguage",
+    "preferredKhmer",
+    "domain",
+    "status",
+    "provenance"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Unique URL-friendly slug identifier (e.g. 'sw-auth-authentication')."
+    },
+    "term": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Source term or short phrase."
+    },
+    "sourceLanguage": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 5,
+      "default": "en",
+      "description": "ISO 639-1 language code of source term."
+    },
+    "preferredKhmer": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Preferred Khmer translation in canonical Unicode NFC."
+    },
+    "alternativeKhmer": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "description": "Alternative acceptable Khmer translations."
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "software",
+        "technology",
+        "business",
+        "finance",
+        "ecommerce",
+        "general",
+        "legal",
+        "healthcare",
+        "education"
+      ],
+      "description": "Domain or industry sector."
+    },
+    "context": {
+      "type": "string",
+      "description": "Specific functional context (e.g. 'user interface action', 'security authentication')."
+    },
+    "partOfSpeech": {
+      "type": "string",
+      "enum": [
+        "noun",
+        "verb",
+        "adjective",
+        "adverb",
+        "phrase",
+        "abbreviation"
+      ],
+      "description": "Grammatical category of the source term."
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "khmer"],
+        "additionalProperties": false,
+        "properties": {
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "khmer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Paired bilingual sentence examples demonstrating natural usage."
+    },
+    "usageNotes": {
+      "type": "string",
+      "description": "Guidance for LLMs on nuance, tone, and pitfalls to avoid."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "community-reviewed",
+        "expert-reviewed",
+        "verified",
+        "deprecated"
+      ],
+      "description": "Peer-review status of this terminology entry."
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["sourceType"],
+      "additionalProperties": false,
+      "properties": {
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "national-council",
+            "official-glossary",
+            "academic",
+            "community",
+            "translator"
+          ]
+        },
+        "reference": {
+          "type": "string",
+          "description": "Citation or source publication name."
+        },
+        "reviewedBy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of contributors or experts who reviewed this entry."
+        },
+        "lastUpdated": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "description": "Date of last modification in YYYY-MM-DD format."
+        }
+      }
+    }
+  }
+}

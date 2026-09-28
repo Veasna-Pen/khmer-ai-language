@@ -1,0 +1,11 @@
+# Licensing Information
+
+The **Khmer AI Language Reference** project is dual-licensed:
+
+1. **Linguistic Data and Documentation**:
+   All dataset files located under `data/`, `evaluation/`, and documentation under `docs/` are licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
+   See [LICENSE-DATA](LICENSE-DATA) for the full text.
+
+2. **Code and Tooling**:
+   All software scripts, validation tools, build compilers, and example code located under `tools/`, `examples/`, and scripts are licensed under the **MIT License**.
+   See [LICENSE-CODE](LICENSE-CODE) for the full text.

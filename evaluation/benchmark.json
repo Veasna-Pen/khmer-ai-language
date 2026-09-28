@@ -1,0 +1,106 @@
+[
+  {
+    "id": "bench-sw-001",
+    "prompt": "Two-factor authentication is required to reset your password.",
+    "sourceLanguage": "en",
+    "domain": "software",
+    "context": "Security login flow",
+    "expectedKhmer": "តម្រូវឱ្យមានការផ្ទៀងផ្ទាត់អត្តសញ្ញាណពីរជំហានដើម្បីកំណត់ពាក្យសម្ងាត់របស់អ្នកឡើងវិញ។",
+    "acceptableAlternatives": [
+      "ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណពីរជំហានត្រូវបានទាមទារដើម្បីកំណត់ពាក្យសម្ងាត់របស់អ្នកឡើងវិញ។"
+    ],
+    "requiredTerminology": [
+      {
+        "term": "two-factor authentication",
+        "khmer": "ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណពីរជំហាន"
+      },
+      {
+        "term": "reset password",
+        "khmer": "កំណត់ពាក្យសម្ងាត់ឡើងវិញ",
+        "pattern": "កំណត់ពាក្យសម្ងាត់.*ឡើងវិញ"
+      }
+    ],
+    "pitfallsToAvoid": [
+      "ឡកអ៊ីន",
+      "ប៉ាសវើត",
+      "ផ្ទៀងផ្ទាត់ពីរជាន់"
+    ]
+  },
+  {
+    "id": "bench-sw-002",
+    "prompt": "Failed to connect to the database server.",
+    "sourceLanguage": "en",
+    "domain": "software",
+    "context": "System error message",
+    "expectedKhmer": "បានបរាជ័យក្នុងការតភ្ជាប់ទៅកាន់ម៉ាស៊ីនមេនៃមូលដ្ឋានទិន្នន័យ។",
+    "acceptableAlternatives": [
+      "មិនអាចតភ្ជាប់ទៅកាន់ម៉ាស៊ីនមេមូលដ្ឋានទិន្នន័យបានទេ។"
+    ],
+    "requiredTerminology": [
+      {
+        "term": "database",
+        "khmer": "មូលដ្ឋានទិន្នន័យ"
+      },
+      {
+        "term": "server",
+        "khmer": "ម៉ាស៊ីនមេ"
+      }
+    ],
+    "pitfallsToAvoid": [
+      "សឺវើ",
+      "ដេតាបាស"
+    ]
+  },
+  {
+    "id": "bench-ecom-001",
+    "prompt": "Please review your shopping cart before proceeding to checkout.",
+    "sourceLanguage": "en",
+    "domain": "ecommerce",
+    "context": "Checkout workflow prompt",
+    "expectedKhmer": "សូមពិនិត្យមើលកន្ត្រកទំនិញរបស់អ្នកមុនពេលបន្តទៅការទូទាត់ប្រាក់។",
+    "acceptableAlternatives": [
+      "សូមពិនិត្យកន្ត្រកទំនិញរបស់អ្នក មុននឹងបន្តការទូទាត់។"
+    ],
+    "requiredTerminology": [
+      {
+        "term": "cart",
+        "khmer": "កន្ត្រកទំនិញ"
+      },
+      {
+        "term": "checkout",
+        "khmer": "ទូទាត់ប្រាក់"
+      }
+    ],
+    "pitfallsToAvoid": [
+      "រទេះរុញ",
+      "ចាកចេញពីសណ្ឋាគារ"
+    ]
+  },
+  {
+    "id": "bench-fin-001",
+    "prompt": "Your current account balance and transaction history are available on the dashboard.",
+    "sourceLanguage": "en",
+    "domain": "finance",
+    "context": "Mobile banking summary screen",
+    "expectedKhmer": "សមតុល្យគណនីបច្ចុប្បន្ន និងប្រវត្តិប្រតិបត្តិការរបស់អ្នកមាននៅលើផ្ទាំងគ្រប់គ្រង។",
+    "acceptableAlternatives": [],
+    "requiredTerminology": [
+      {
+        "term": "account balance",
+        "khmer": "សមតុល្យគណនី"
+      },
+      {
+        "term": "transaction",
+        "khmer": "ប្រតិបត្តិការ"
+      },
+      {
+        "term": "dashboard",
+        "khmer": "ផ្ទាំងគ្រប់គ្រង"
+      }
+    ],
+    "pitfallsToAvoid": [
+      "តុល្យភាពគណនី",
+      "ដាសបត"
+    ]
+  }
+]

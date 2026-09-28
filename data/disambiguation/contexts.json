@@ -1,0 +1,86 @@
+[
+  {
+    "term": "account",
+    "notes": "Different translations required depending on financial, digital, or bookkeeping context.",
+    "disambiguations": [
+      {
+        "context": "Software / User Profile",
+        "khmer": "គណនីអ្នកប្រើប្រាស់",
+        "exampleSource": "Create a new user account.",
+        "exampleKhmer": "បង្កើតគណនីអ្នកប្រើប្រាស់ថ្មី។"
+      },
+      {
+        "context": "Banking / Finance",
+        "khmer": "គណនីធនាគារ",
+        "exampleSource": "Transfer funds to savings account.",
+        "exampleKhmer": "ផ្ទេរប្រាក់ទៅកាន់គណនីសន្សំ។"
+      },
+      {
+        "context": "Accounting / Bookkeeping",
+        "khmer": "គណនេយ្យ",
+        "exampleSource": "Chartered accountant",
+        "exampleKhmer": "គណនេយ្យករជំនាញ"
+      }
+    ]
+  },
+  {
+    "term": "save",
+    "notes": "Digital storage vs. financial accumulation vs. rescue/medical preservation.",
+    "disambiguations": [
+      {
+        "context": "Software / Digital File",
+        "khmer": "រក្សាទុក",
+        "exampleSource": "Save your document before closing.",
+        "exampleKhmer": "រក្សាទុកឯកសាររបស់អ្នកមុនពេលបិទ។"
+      },
+      {
+        "context": "Finance / Money",
+        "khmer": "សន្សំ",
+        "exampleSource": "Save money for future investments.",
+        "exampleKhmer": "សន្សំប្រាក់សម្រាប់ការវិនិយោគនាពេលអនាគត។"
+      },
+      {
+        "context": "Life / Rescue",
+        "khmer": "សង្គ្រោះ",
+        "exampleSource": "Save lives during emergencies.",
+        "exampleKhmer": "សង្គ្រោះជីវិតអំឡុងពេលមានគ្រោះអាសន្ន។"
+      }
+    ]
+  },
+  {
+    "term": "post",
+    "notes": "Social media action vs. postal service vs. physical pillar.",
+    "disambiguations": [
+      {
+        "context": "Social Media / Digital Content",
+        "khmer": "បង្ហោះ",
+        "exampleSource": "Post a new photo on your timeline.",
+        "exampleKhmer": "បង្ហោះរូបថតថ្មីនៅលើទំព័ររបស់អ្នក។"
+      },
+      {
+        "context": "Postal Service / Mail",
+        "khmer": "ប្រៃសណីយ៍",
+        "exampleSource": "Send a parcel via post office.",
+        "exampleKhmer": "ផ្ញើកញ្ចប់ទំនិញតាមរយៈការិយាល័យប្រៃសណីយ៍។"
+      }
+    ]
+  },
+  {
+    "term": "checkout",
+    "notes": "E-commerce payment vs. hotel departure.",
+    "disambiguations": [
+      {
+        "context": "E-Commerce / Shopping",
+        "khmer": "ទូទាត់ប្រាក់",
+        "exampleSource": "Proceed to checkout to complete your purchase.",
+        "exampleKhmer": "បន្តទៅការទូទាត់ប្រាក់ដើម្បីបញ្ចប់ការទិញរបស់អ្នក។"
+      },
+      {
+        "context": "Hospitality / Hotel",
+        "khmer": "ចាកចេញពីសណ្ឋាគារ",
+        "exampleSource": "Hotel checkout time is 12:00 PM.",
+        "exampleKhmer": "ម៉ោងចាកចេញពីសណ្ឋាគារគឺម៉ោង ១២:០០ ថ្ងៃត្រង់។"
+      }
+    ]
+  }
+]

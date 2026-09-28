@@ -1,0 +1,202 @@
+[
+  {
+    "id": "sw-cloud-database",
+    "term": "database",
+    "sourceLanguage": "en",
+    "preferredKhmer": "មូលដ្ឋានទិន្នន័យ",
+    "alternativeKhmer": [],
+    "domain": "software",
+    "context": "Data storage infrastructure",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Failed to connect to the database.",
+        "khmer": "បានបរាជ័យក្នុងការតភ្ជាប់ទៅកាន់មូលដ្ឋានទិន្នន័យ។",
+        "notes": "System error log"
+      }
+    ],
+    "usageNotes": "Universal standard term nationwide in education and industry.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL Computer Science Lexicon",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "sw-cloud-deployment",
+    "term": "deployment",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ការដាក់ឱ្យដំណើរការ",
+    "alternativeKhmer": ["ការដាក់ពង្រាយ"],
+    "domain": "software",
+    "context": "DevOps release process",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "The production deployment completed successfully.",
+        "khmer": "ការដាក់ឱ្យដំណើរការលើប្រព័ន្ធផលិតកម្មបានបញ្ចប់ដោយជោគជ័យ។",
+        "notes": "CI/CD pipeline notification"
+      }
+    ],
+    "usageNotes": "'ការដាក់ឱ្យដំណើរការ' is natural for software services. 'ការដាក់ពង្រាយ' is historically military (troop deployment) and can sound awkward in IT context.",
+    "status": "expert-reviewed",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "Tech Industry Conventions & NCKL",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "sw-cloud-server",
+    "term": "server",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ម៉ាស៊ីនមេ",
+    "alternativeKhmer": [],
+    "domain": "software",
+    "context": "Server infrastructure and networking",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Internal server error occurred.",
+        "khmer": "កំហុសម៉ាស៊ីនមេផ្ទៃក្នុងបានកើតឡើង។",
+        "notes": "HTTP 500 error display"
+      }
+    ],
+    "usageNotes": "Standard term taught across all Cambodian universities and technical standards.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "sw-cloud-client",
+    "term": "client",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ម៉ាស៊ីនកូន",
+    "alternativeKhmer": ["កម្មវិធីកូន"],
+    "domain": "software",
+    "context": "Client-server software architecture",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Client-side validation failed.",
+        "khmer": "ការផ្ទៀងផ្ទាត់នៅខាងម៉ាស៊ីនកូនបានបរាជ័យ។",
+        "notes": "Developer console warning"
+      }
+    ],
+    "usageNotes": "In computing architecture (client-server), use 'ម៉ាស៊ីនកូន' or 'កម្មវិធីកូន'. In business/consulting (paying client), use 'អតិថិជន' (see business domain).",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL Computer Science Lexicon",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "sw-cloud-repository",
+    "term": "repository",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ឃ្លាំងផ្ទុកកូដ",
+    "alternativeKhmer": ["ឃ្លាំងផ្ទុក"],
+    "domain": "software",
+    "context": "Version control and Git repositories",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Clone the remote repository.",
+        "khmer": "ក្លូនឃ្លាំងផ្ទុកកូដពីចម្ងាយ។",
+        "notes": "Git documentation"
+      }
+    ],
+    "usageNotes": "Use 'ឃ្លាំងផ្ទុកកូដ' for software code repositories to provide immediate clarity.",
+    "status": "expert-reviewed",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "Tech Glossary & Open Source Community",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "sw-cloud-backup",
+    "term": "backup",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ការបម្រុងទុក",
+    "alternativeKhmer": [],
+    "domain": "software",
+    "context": "Data redundancy and safety copies",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Automatic daily backup is enabled.",
+        "khmer": "ការបម្រុងទុកប្រចាំថ្ងៃដោយស្វ័យប្រវត្តិត្រូវបានបើកដំណើរការ។",
+        "notes": "System settings"
+      }
+    ],
+    "usageNotes": "Universal standard term for backups.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "sw-cloud-restore",
+    "term": "restore",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ស្តារឡើងវិញ",
+    "alternativeKhmer": ["ស្តារ"],
+    "domain": "software",
+    "context": "Data recovery from backup",
+    "partOfSpeech": "verb",
+    "examples": [
+      {
+        "source": "Restore database from latest snapshot.",
+        "khmer": "ស្តារមូលដ្ឋានទិន្នន័យឡើងវិញពីរូបថតបម្រុងចុងក្រោយ។",
+        "notes": "Disaster recovery step"
+      }
+    ],
+    "usageNotes": "Standard term for restoring data.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "sw-cloud-encryption",
+    "term": "encryption",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ការបំប្លែងកូដសម្ងាត់",
+    "alternativeKhmer": ["ការអ៊ិនគ្រីប"],
+    "domain": "software",
+    "context": "Data cryptography and network security",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "End-to-end encryption protects your messages.",
+        "khmer": "ការបំប្លែងកូដសម្ងាត់ពីចុងម្ខាងទៅចុងម្ខាងការពារសាររបស់អ្នក។",
+        "notes": "Privacy banner"
+      }
+    ],
+    "usageNotes": "'ការបំប្លែងកូដសម្ងាត់' is the formal NCKL term. In developer documentation, 'ការអ៊ិនគ្រីប' is also widely understood as an alternative.",
+    "status": "expert-reviewed",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  }
+]

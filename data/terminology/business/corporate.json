@@ -1,0 +1,127 @@
+[
+  {
+    "id": "biz-corp-invoice",
+    "term": "invoice",
+    "sourceLanguage": "en",
+    "preferredKhmer": "វិក្កយបត្រ",
+    "alternativeKhmer": [],
+    "domain": "business",
+    "context": "Commercial billing and accounting",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "An invoice has been sent to your email.",
+        "khmer": "វិក្កយបត្រត្រូវបានផ្ញើទៅកាន់អ៊ីមែលរបស់អ្នកហើយ។",
+        "notes": "Billing notification"
+      }
+    ],
+    "usageNotes": "Standard term officially defined by General Department of Taxation (GDT) and NCKL. Do not confuse with receipt (បង្កាន់ដៃទទួលប្រាក់).",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "General Department of Taxation & NCKL",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "biz-corp-receipt",
+    "term": "receipt",
+    "sourceLanguage": "en",
+    "preferredKhmer": "បង្កាន់ដៃទទួលប្រាក់",
+    "alternativeKhmer": ["បង្កាន់ដៃ", "វិក្កយបត្រទូទាត់រួច"],
+    "domain": "business",
+    "context": "Proof of payment",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Keep this receipt as proof of payment.",
+        "khmer": "សូមរក្សាទុកបង្កាន់ដៃទទួលប្រាក់នេះទុកជាភស្តុតាងនៃការទូទាត់។",
+        "notes": "Payment receipt footer"
+      }
+    ],
+    "usageNotes": "An invoice is a bill for payment (វិក្កយបត្រ); a receipt is proof that payment has been made (បង្កាន់ដៃទទួលប្រាក់).",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "biz-corp-contract",
+    "term": "contract",
+    "sourceLanguage": "en",
+    "preferredKhmer": "កិច្ចសន្យា",
+    "alternativeKhmer": [],
+    "domain": "business",
+    "context": "Legal business agreement",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Sign the employment contract.",
+        "khmer": "ចុះហត្ថលេខាលើកិច្ចសន្យាការងារ។",
+        "notes": "HR onboarding task"
+      }
+    ],
+    "usageNotes": "Universal legal and business standard term.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "Ministry of Commerce & NCKL",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "biz-corp-stakeholder",
+    "term": "stakeholder",
+    "sourceLanguage": "en",
+    "preferredKhmer": "ភាគីពាក់ព័ន្ធ",
+    "alternativeKhmer": [],
+    "domain": "business",
+    "context": "Corporate governance and project management",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Present the project updates to key stakeholders.",
+        "khmer": "ធ្វើបទបង្ហាញអំពីបច្ចុប្បន្នភាពគម្រោងទៅកាន់ភាគីពាក់ព័ន្ធសំខាន់ៗ។",
+        "notes": "Project management report"
+      }
+    ],
+    "usageNotes": "Standard term used in Cambodian corporate, NGO, and government sectors.",
+    "status": "verified",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL standards",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  },
+  {
+    "id": "biz-corp-compliance",
+    "term": "compliance",
+    "sourceLanguage": "en",
+    "preferredKhmer": "អនុលោមភាព",
+    "alternativeKhmer": ["ការអនុវត្តតាមបទប្បញ្ញត្តិ"],
+    "domain": "business",
+    "context": "Regulatory standards adherence",
+    "partOfSpeech": "noun",
+    "examples": [
+      {
+        "source": "Ensure regulatory compliance across all operations.",
+        "khmer": "ធានាឱ្យបាននូវអនុលោមភាពនៃបទប្បញ្ញត្តិនៅគ្រប់ប្រតិបត្តិការទាំងអស់។",
+        "notes": "Corporate governance guideline"
+      }
+    ],
+    "usageNotes": "Official legal and regulatory terminology nationwide.",
+    "status": "expert-reviewed",
+    "provenance": {
+      "sourceType": "official-glossary",
+      "reference": "NCKL Legal Lexicon",
+      "reviewedBy": ["Khmer AI Working Group"],
+      "lastUpdated": "2026-09-28"
+    }
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "name": "khmer-ai-language",
+  "version": "0.1.0",
+  "description": "Open-source Khmer language reference for AI and LLMs",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node tools/validator/validate.js",
+    "build": "node tools/compiler/build-dist.js",
+    "export": "node tools/export/export-formats.js"
+  },
+  "keywords": [
+    "khmer",
+    "ai",
+    "llm",
+    "translation",
+    "localization",
+    "natural-language-processing",
+    "nlp",
+    "terminology",
+    "cambodia"
+  ],
+  "author": "Khmer AI Language Reference Contributors",
+  "license": "CC-BY-4.0 AND MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khmer-ai/khmer-ai-language.git"
+  }
+}
